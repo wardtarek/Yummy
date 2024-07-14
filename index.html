@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link
+      rel="icon"
+      href="img/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body style="background-color: var(--mainColor)">
+    <div class="loadingScreen d-flex justify-content-center align-items-center">
+      <div class="spinner"></div>
+    </div>
+    <div class="sidenav d-flex">
+      <div
+        class="navb d-flex flex-column justify-content-between text-white p-4"
+      >
+        <ul class="list-unstyled overflow-hidden">
+          <li class="py-2"><a href="#" id="search">Search</a></li>
+          <li class="py-2"><a href="#" id="categories">Categories</a></li>
+          <li class="py-2"><a href="#" id="area">Area</a></li>
+          <li class="py-2"><a href="#" id="ingredients">Ingredients</a></li>
+          <li class="py-2"><a href="#" id="contactus">Contact Us</a></li>
+        </ul>
+        <div>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-solid fa-globe"></i>
+          <p>
+            Copyright Â© 2019 All Rights <br />
+            Reserved.
+          </p>
+        </div>
+      </div>
+      <div
+        class="divOpenClose bg-white d-flex flex-column justify-content-between align-items-center text-center px-2 py-4"
+      >
+        <img src="img/logo.png" alt="" style="width: 50px" />
+        <i class="fa-solid fa-align-justify fa-2x" id="openCloseIcon"></i>
+        <div class="d-flex flex-column justify-content-center">
+          <i class="fa-solid fa-globe mb-1"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+    <section class="home" style="width: calc(100% - 66px); margin-left: auto">
+      <div class="container py-5">
+        <div class="row" id="rowSearch"></div>
+        <div class="row g-4" id="myRow">
+
+        </div>
+      </div>
+    </section>
+    <section
+      id="contact"
+      class="p-5"
+      style="width: calc(100% - 66px); margin-left: auto; display: none"
+    >
+      <div class="container py-md-5 px-md-5">
+        <form action="">
+          <div class="row justify-content-center py-md-5 px-md-5">
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control mb-3"
+                id="nameInput"
+                placeholder="Enter Your Name"
+              />
+              <div
+                class="alert alert-danger d-flex align-items-center d-none"
+                id="nameAlert"
+                role="alert"
+              >
+                <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                <div>Please Enter a Valid Name</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="email"
+                class="form-control mb-4"
+                id="emailInput"
+                placeholder="Enter Your Email"
+              />
+              <div
+                class="alert alert-danger d-flex align-items-center d-none"
+                id="emailAlert"
+                role="alert"
+              >
+                <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                <div>Please Enter a Valid Email *exemple@yyy.zzz</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="number"
+                class="form-control mb-4"
+                id="phoneInput"
+                placeholder="Enter Your Phone"
+              />
+              <div
+                class="alert alert-danger d-flex align-items-center d-none"
+                id="phoneAlert"
+                role="alert"
+              >
+                <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                <div>Please Enter a Valid Phone Number</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="number"
+                class="form-control mb-4"
+                id="ageInput"
+                placeholder="Enter Your Age"
+              />
+              <div
+                class="alert alert-danger d-flex align-items-center d-none"
+                id="ageAlert"
+                role="alert"
+              >
+                <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                <div>Please Enter a Valid Age</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="password"
+                class="form-control mb-4"
+                id="passwordInput"
+                placeholder="Enter Your Password"
+              />
+              <div
+                class="alert alert-danger d-flex align-items-center d-none"
+                id="passwordAlert"
+                role="alert"
+              >
+                <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                <div>
+                  Please Enter a Valid Password * password must be (6-16) chars
+                  including atleast one number and one special char 
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="password"
+                class="form-control mb-4"
+                id="rePasswordInput"
+                placeholder="RePassword"
+              />
+              <div
+                class="alert alert-danger d-flex align-items-center d-none"
+                id="rePasswordAlert"
+                role="alert"
+              >
+                <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                <div>Please make sure your Passwords match</div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="d-flex justify-content-center">
+                <button
+                  type="submit"
+                  class="btn btn-outline-danger px-4 py-2"
+                  disabled
+                  id="submitBtn"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

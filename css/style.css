@@ -1,0 +1,69 @@
+:root {
+  --mainColor: #0d0d0d;
+}
+body{
+    overflow: hidden;
+}
+.loadingScreen{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    background-color: var(--mainColor);
+    z-index: 1000;
+}
+.spinner {
+   width: 11.2px;
+   height: 11.2px;
+   border-radius: 11.2px;
+   box-shadow: 28px 0px 0 0 rgba(255,255,255,0.2), 22.7px 16.5px 0 0 rgba(255,255,255,0.4), 8.68px 26.6px 0 0 rgba(255,255,255,0.6), -8.68px 26.6px 0 0 rgba(255,255,255,0.8), -22.7px 16.5px 0 0 #ffffff;
+   animation: spinner-b87k6z 1s infinite linear;
+}
+
+@keyframes spinner-b87k6z {
+   to {
+      transform: rotate(360deg);
+   }
+}
+.sidenav {
+  background-color: var(--mainColor);
+  position: fixed;
+  height: 100vh;
+  top: 0px;
+  left: -100px;
+  z-index: 999;
+}
+.sidenav li {
+  position: relative;
+  top: 200px;
+}
+.sidenav .navb a {
+  color: #fff;
+  text-decoration: none;
+}
+.divOpenClose {
+  color: var(--mainColor);
+}
+
+.sidenav i {
+  cursor: pointer;
+}
+.item{
+    cursor: pointer;
+}
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f9f6f6ca;
+  top: 120%;
+  transition: all 0.6s;
+}
+.img-container:hover .layer {
+  top: 0;
+}
+#searchByName::placeholder,#searchByFLetter::placeholder{
+  color: #ffffff6f;
+}
